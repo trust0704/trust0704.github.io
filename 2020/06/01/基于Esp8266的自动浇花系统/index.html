@@ -1,114 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cmn-Hans">
 <head>
-  <meta charset="utf-8">
-  
-
-  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>基于Esp8266的自动浇花系统 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="首先：魔改自yltzdhbc大佬的查看链接flower care sys项目（变量中”浇花”的由来）做这个的项目其实并不是为了浇花什么的，是为了帮母上大人科学化养豆芽（没错，母上看了抖音上手工养豆芽，决定自己试一试项目消耗耗时四天（工期非实际消耗时间）耗钱80.58人民币先放个效果图![IMG_7436](C:\Users\Administrator\Documents\Tencent Files">
-<meta property="og:type" content="article">
-<meta property="og:title" content="基于Esp8266的自动浇花系统">
-<meta property="og:url" content="http://yoursite.com/2020/06/01/%E5%9F%BA%E4%BA%8EEsp8266%E7%9A%84%E8%87%AA%E5%8A%A8%E6%B5%87%E8%8A%B1%E7%B3%BB%E7%BB%9F/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="首先：魔改自yltzdhbc大佬的查看链接flower care sys项目（变量中”浇花”的由来）做这个的项目其实并不是为了浇花什么的，是为了帮母上大人科学化养豆芽（没错，母上看了抖音上手工养豆芽，决定自己试一试项目消耗耗时四天（工期非实际消耗时间）耗钱80.58人民币先放个效果图![IMG_7436](C:\Users\Administrator\Documents\Tencent Files">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C1.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C2.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C3.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C4.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C5.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C6.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C7.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C8.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C9.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C10.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C11.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C12.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C13.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C14.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C15.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C16.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C17.jpg">
-<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C18.jpg">
-<meta property="article:published_time" content="2020-06-01T13:41:56.000Z">
-<meta property="article:modified_time" content="2020-06-01T14:15:19.767Z">
-<meta property="article:author" content="John Doe">
-<meta property="article:tag" content="技术杂文">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C1.jpg">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
-    <link rel="icon" href="/favicon.png">
   
+  <!--link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.10.0/styles/github-gist.min.css"-->
   
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/highlight.js/9.10.0/styles/github-gist.min.css">
+
   
 <link rel="stylesheet" href="/css/style.css">
 
 <meta name="generator" content="Hexo 4.2.1"></head>
 
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+<div class="Shell">
+    <aside class='SideBar'>
+    <section class='avatar' style="background-image: url()">
+        <div class='av-pic' style="background-image: url()">
+        </div>
+    </section>
+    <section class='menu'>
+        <div>Hexo</div>
         
-          <a class="main-nav-link" href="/">Home</a>
+        <ul>
+          
+            <a href="/" class="Btn">
+              <li>Home</li>
+            </a>  
+          
+            <a href="/archives/" class="Btn">
+              <li>Archive</li>
+            </a>  
+          
+        </ul>
+    </section>
+    <section class="media">
         
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-基于Esp8266的自动浇花系统" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/01/%E5%9F%BA%E4%BA%8EEsp8266%E7%9A%84%E8%87%AA%E5%8A%A8%E6%B5%87%E8%8A%B1%E7%B3%BB%E7%BB%9F/" class="article-date">
-  <time datetime="2020-06-01T13:41:56.000Z" itemprop="datePublished">2020-06-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      基于Esp8266的自动浇花系统
-    </h1>
-  
+    </section>
+</aside>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>首先：<br>魔改自yltzdhbc大佬的<a href="https://github.com/yltzdhbc/FloewrCareSys" target="_blank" rel="noopener">查看链接</a><br>flower care sys项目（变量中”浇花”的由来）<br>做这个的项目其实并不是为了浇花什么的，是为了帮母上大人科学化养豆芽<br>（没错，母上看了抖音上手工养豆芽，决定自己试一试<br>项目消耗<br>耗时四天（工期非实际消耗时间）<br>耗钱80.58人民币先放个效果图![IMG_7436](C:\Users\Administrator\Documents\Tencent Files\642960002\FileRecv\MobileFile\IMG_7436.GIF)                             （豆芽还没发芽，所以只是水泵单纯的抽水）</p>
+    <div class="container">
+        <div data-pager-shell>
+            <div>
+  <article class='ContentView'>
+    <header class='PageTitle'>
+        <h1>基于Esp8266的自动浇花系统</h1>
+    </header>
+
+    <section>
+      <p>首先：<br>魔改自yltzdhbc大佬的<a href="https://github.com/yltzdhbc/FloewrCareSys" target="_blank" rel="noopener">查看链接</a><br>flower care sys项目（变量中”浇花”的由来）<br>做这个的项目其实并不是为了浇花什么的，是为了帮母上大人科学化养豆芽<br>（没错，母上看了抖音上手工养豆芽，决定自己试一试<br>项目消耗<br>耗时四天（工期非实际消耗时间）<br>耗钱80.58人民币先放个效果图![IMG_7436](C:\Users\Administrator\Documents\Tencent Files\642960002\FileRecv\MobileFile\IMG_7436.GIF)                             （豆芽还没发芽，所以只是水泵单纯的抽水）</p>
 <p>手动浇水!</p>
 <p>以及APP界面图</p>
 <p><img src="E:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C1.jpg" alt="1"></p>
@@ -168,125 +113,58 @@
 <p>然后提升成功后重新打开界面，就和我的界面一模一样了。</p>
 <p>至此结束。</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/01/%E5%9F%BA%E4%BA%8EEsp8266%E7%9A%84%E8%87%AA%E5%8A%A8%E6%B5%87%E8%8A%B1%E7%B3%BB%E7%BB%9F/" data-id="ckawm08ow00001kuxahxqem4f" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E6%96%87/" rel="tag">技术杂文</a></li></ul>
 
-    </footer>
-  </div>
-  
+      
+
+    </section>
     
-<nav id="article-nav">
-  
-  
-    <a href="/2020/06/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
-    </a>
-  
-</nav>
+      <section class='ArticleMeta'>
+          <div>
+            发布于&nbsp;
+            <time datetime="2020-06-01T13:41:56.000Z" itemprop="datePublished">
+              2020-06-01
+            </time>
+          </div>
+          
+            <div>
+              tags: 
+  <li class="meta-text">
+  { <a href="/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E6%96%87/">技术杂文</a> }
+  </li>
 
-  
+
+            </div>
+          
+      </section>
+    
+    
 </article>
 
-</section>
-        
-          <aside id="sidebar">
   
-    
+</div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E6%96%87/" rel="tag">技术杂文</a></li></ul>
+            <footer>
+    <div>© 2020 - John Doe </div>
+    <div>
+        <span>
+            Powered by <a href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
+        </span>
+        ,
+        <span>
+            Theme - <a href="https://github.com/nameoverflow/hexo-theme-icalm" target="_blank" rel="noopener">Icalm</a>
+        </span>
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/%E6%8A%80%E6%9C%AF%E6%9D%82%E6%96%87/" style="font-size: 10px;">技术杂文</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">June 2020</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/06/01/%E5%9F%BA%E4%BA%8EEsp8266%E7%9A%84%E8%87%AA%E5%8A%A8%E6%B5%87%E8%8A%B1%E7%B3%BB%E7%BB%9F/">基于Esp8266的自动浇花系统</a>
-          </li>
-        
-          <li>
-            <a href="/2020/06/01/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
+
+        </div>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+</div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/pager/dist/singlepager.js"></script>
 
+<script>
+var sp = new Pager('data-pager-shell')
 
-  
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-
-  
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
+</script>
 </body>
 </html>
