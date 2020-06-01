@@ -5,15 +5,39 @@
   
 
   
-  <title>Hexo</title>
+  <title>基于Esp8266的自动浇花系统 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="首先：魔改自yltzdhbc大佬的查看链接flower care sys项目（变量中”浇花”的由来）做这个的项目其实并不是为了浇花什么的，是为了帮母上大人科学化养豆芽（没错，母上看了抖音上手工养豆芽，决定自己试一试项目消耗耗时四天（工期非实际消耗时间）耗钱80.58人民币先放个效果图![IMG_7436](C:\Users\Administrator\Documents\Tencent Files">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于Esp8266的自动浇花系统">
+<meta property="og:url" content="http://yoursite.com/2020/06/01/%E5%9F%BA%E4%BA%8EEsp8266%E7%9A%84%E8%87%AA%E5%8A%A8%E6%B5%87%E8%8A%B1%E7%B3%BB%E7%BB%9F/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="首先：魔改自yltzdhbc大佬的查看链接flower care sys项目（变量中”浇花”的由来）做这个的项目其实并不是为了浇花什么的，是为了帮母上大人科学化养豆芽（没错，母上看了抖音上手工养豆芽，决定自己试一试项目消耗耗时四天（工期非实际消耗时间）耗钱80.58人民币先放个效果图![IMG_7436](C:\Users\Administrator\Documents\Tencent Files">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C1.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C2.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C3.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C4.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C5.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C6.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C7.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C8.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C9.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C10.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C11.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C12.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C13.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C14.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C15.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C16.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C17.jpg">
+<meta property="og:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C18.jpg">
+<meta property="article:published_time" content="2020-06-01T13:41:56.000Z">
+<meta property="article:modified_time" content="2020-06-01T14:15:19.767Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="技术杂文">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="e:%5C%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87%5C1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -62,9 +86,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-基于Esp8266的自动浇花系统" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-基于Esp8266的自动浇花系统" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/06/01/%E5%9F%BA%E4%BA%8EEsp8266%E7%9A%84%E8%87%AA%E5%8A%A8%E6%B5%87%E8%8A%B1%E7%B3%BB%E7%BB%9F/" class="article-date">
   <time datetime="2020-06-01T13:41:56.000Z" itemprop="datePublished">2020-06-01</time>
@@ -77,8 +99,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/01/%E5%9F%BA%E4%BA%8EEsp8266%E7%9A%84%E8%87%AA%E5%8A%A8%E6%B5%87%E8%8A%B1%E7%B3%BB%E7%BB%9F/">基于Esp8266的自动浇花系统</a>
+    <h1 class="article-title" itemprop="name">
+      基于Esp8266的自动浇花系统
     </h1>
   
 
@@ -157,60 +179,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/06/01/hello-world/" class="article-date">
-  <time datetime="2020-06-01T13:34:19.974Z" itemprop="datePublished">2020-06-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/01/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2020/06/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/06/01/hello-world/" data-id="ckawm08p200011kux14r8dt7q" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
